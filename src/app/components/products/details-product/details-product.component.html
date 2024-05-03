@@ -1,0 +1,46 @@
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="no-wrap-flex gx-4 gx-lg-5 align-items-center">
+
+      <!-- Left side: Product image -->
+      <div class="col-md-6">
+        <div class="card">
+          <img class="card-img-top" [src]="product?.imgUrl" alt="Product Image"/>
+
+        </div>
+      </div>
+
+      <!-- Right side: Product details -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="small mb-1">SKU: {{ product?.sku }}</div>
+            <h1 class="display-5 fw-bolder">{{ product?.name }}</h1>
+            <div class="fs-5 mb-5">
+              <span>$ {{ product?.unitPrice }}</span>
+            </div>
+            <p class="lead">{{ product?.description }}</p>
+            <ul class="list-unstyled">
+              <li>Status: <strong>{{ product?.active ? 'Active' : 'Inactive' }}</strong></li>
+              <li>Units in Stock: <strong>{{ product?.unitsInStock }}</strong></li>
+              <li>Date Created: <strong>{{ product?.dateCreated | date }}</strong></li>
+              <li>Last Updated: <strong>{{ product?.lastUpdated | date }}</strong></li>
+            </ul>
+
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center">
+                <button class="btn btn-outline-dark mt-auto"
+                        *ngIf="product"
+                        (click)="addProductToCart(product.productId)">Add to cart
+                  <i class="bi-cart-fill me-1"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

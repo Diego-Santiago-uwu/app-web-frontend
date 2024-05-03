@@ -1,0 +1,69 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="container px-4 px-lg-5">
+
+    <a class="navbar-brand" href="#!"> DIALE STORE</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+
+        <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/home">Home</a></li>
+
+        <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/about">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMujer" href="#" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">Hombre</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/product', 'Hombre']" routerLinkActive="active">Todos los
+              productos</a>
+            <li>
+              <hr class="dropdown-divider"/>
+            </li>
+            <a class="dropdown-item" [routerLink]="['/product', 'Hombre', 'Pantalon']" routerLinkActive="active">Pantalones</a>
+            <a class="dropdown-item" [routerLink]="['/product', 'Hombre', 'Camisa']"
+               routerLinkActive="active">Camisas</a>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownHombre" href="#" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">Mujeres</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/product', 'Mujer']" routerLinkActive="active">Todos los
+              productos</a>
+            <li>
+              <hr class="dropdown-divider"/>
+            </li>
+            <a class="dropdown-item" [routerLink]="['/product', 'Mujer', 'Blusas']" routerLinkActive="active">Blusas</a>
+            <a class="dropdown-item" [routerLink]="['/product', 'Mujer', 'Faldas']" routerLinkActive="active">Faldas</a>
+          </ul>
+        </li>
+
+      </ul>
+
+      <div ngbDropdown class="d-inline-block" placement="right">
+        <button class="btn btn-outline-dark" id="dropdownMenuButton" ngbDropdownToggle (click)="toggleDropdown()">
+          <div class="user-circle">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="username">{{ localStorage.getItem("username") }}</div>
+        </button>
+        <div ngbDropdownMenu *ngIf="isDropdownOpen" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item" [routerLink]="['/cart']" routerLinkActive="active">Cart</button>
+          <button class="dropdown-item" [routerLink]="['/orders']" routerLinkActive="active">Orders</button>
+          <button class="dropdown-item" type="button" (click)="logout()">Logout</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</nav>

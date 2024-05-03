@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.text-body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.images {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  .diego {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-right: 40px;
+  }
+
+  .alejandra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-right: 40px;
+  }
+}

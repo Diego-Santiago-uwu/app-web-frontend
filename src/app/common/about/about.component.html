@@ -1,74 +1,55 @@
 <section class="py-5">
 
-  <div class="container px-4 px-lg-5 my-5">
-    <div class="no-wrap-flex gx-4 gx-lg-5 align-items-center">
+  <div class="header">
+    <h1 class="display-5 fw-bolder"> Sitio web diseñado por Alejandra Carmen y Diego Santiago </h1>
+  </div>
 
-      <h1 class="display-5 fw-bolder"> Sitio web diseñado por Alejandra Carmen y Diego Santiago </h1>
+  <div class="text-body">
+    <p class="lead"> En el frontend, la aplicación utiliza Angular para crear una interfaz de usuario interactiva y
+      dinámica. Los componentes de Angular, como NavBarComponent, HeaderComponent, FooterComponent,
+      ProductListComponent, DetailsProductComponent, LoginComponent y RegisterComponent, se utilizan para construir la
+      interfaz de usuario. Además, el enrutamiento de Angular permite una navegación fluida entre diferentes vistas en
+      la aplicación. Para el diseño y la estilización de la interfaz de usuario, se utiliza Bootstrap, y Font Awesome
+      proporciona los iconos. Algunas interacciones de la interfaz de usuario se manejan con jQuery.</p>
 
+    <p class="lead"> En el backend, la aplicación está basada en Java y Spring Boot, y utiliza Maven como herramienta de
+      gestión de proyectos. La estructura del backend se organiza en torno a varias entidades principales: User,
+      Address, ShoppingCart, Order y Product. Cada entidad tiene su propio repositorio para manejar las operaciones de
+      base de datos, y los servicios correspondientes para implementar la lógica de negocio.
 
-      <!-- Left side: Product image -->
-      <div class="col-md-6">
-        <div class="card">
-          <img class="card-img-top"
-               src="https://2.bp.blogspot.com/-43Uha-8nKvo/UBqyK1XAscI/AAAAAAAAC4E/m66x5R-rZNY/s1600/guess+amazon+11.jpg"
-               alt="Product Image"/>
-        </div>
+    <p class="lead"> El UserService se encarga de las operaciones relacionadas con los usuarios, como la autenticación y
+      la creación de nuevos usuarios, utilizando PasswordUtils para el manejo de contraseñas. El ShoppingCartService y
+      OrderService manejan las operaciones relacionadas con los carritos de compras y los pedidos, respectivamente.
+      Estos servicios son utilizados por el UserController para implementar endpoints que permiten a los usuarios
+      agregar productos a sus carritos de compras y crear pedidos.</p>
+
+    <p class="lead"> La aplicación utiliza Spring Security para la autenticación y la autorización, y BCrypt para el
+      hash de las contraseñas. Los datos se almacenan en una base de datos y la aplicación utiliza Spring Data JPA para
+      interactuar con ella. </p>
+  </div>
+
+  <div class="images">
+
+    <div class="diego">
+
+      <div>
+        <img src="https://i.pinimg.com/originals/09/43/84/094384cbf7e2d1ce95ae613226552308.jpg" alt="Diego"
+             height="200px" width="175px">
       </div>
+      <p> Diego </p>
 
-      <!-- Right side: Product details -->
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="display-5 fw-bolder"> Hombres </h1>
+    </div>
+    <div class="alejandra">
 
-            <p class="lead"> Luce los mejores outfits tendencia de hombre este 2024</p>
-
-            <div class="d-flex justify-center">
-
-              <button class="btn btn-outline-dark flex-shrink-0" type="button" [routerLink]="['/product', 'Hombre']">
-                <i class="bi-cart-fill me-1"></i>
-                Ir a la seccion Hombre
-              </button>
-
-            </div>
-          </div>
-        </div>
+      <div>
+        <img
+          src="https://substackcdn.com/image/fetch/w_474,c_limit,f_auto,q_auto:good,fl_progressive:steep/https://substack-post-media.s3.amazonaws.com/public/images/c1583478-47d1-46f8-b257-64012a058f10_1024x1024.png"
+          alt="Alejandra" height="200px" width="175px">
       </div>
+      <p> Alejandra </p>
+
     </div>
 
-    <!-- Mujeres Section -->
-    <div class="container px-4 px-lg-5 my-5">
-      <div class="no-wrap-flex gx-4 gx-lg-5 align-items-center reverse-flex">
-
-        <!-- Right side: Product details -->
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="display-5 fw-bolder"> Mujeres </h1>
-
-              <p class="lead"> Luce los mejores outfits tendencia de hombre este 2024</p>
-
-              <div class="d-flex justify-center">
-
-                <button class="btn btn-outline-dark flex-shrink-0" type="button" [routerLink]="['/product', 'Mujer']">
-                  <i class="bi-cart-fill me-1"></i>
-                  Ir a la seccion Mujer
-                </button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Left side: Product image -->
-        <div class="col-md-6">
-          <div class="card">
-            <img class="card-img-top" src="https://th.bing.com/th/id/OIP.t8xi8KNuMDqNH06cj7i2xwAAAA?rs=1&pid=ImgDetMain"
-                 alt="Product Image"/>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 </section>

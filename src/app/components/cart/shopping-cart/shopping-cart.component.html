@@ -1,0 +1,106 @@
+<section>
+  <div class="main-container">
+
+    <div class="content-container">
+
+      <!-- Lado izquierdo -->
+      <div class="left-part">
+
+        <div class="header-left">
+          <h1 class="black-letter">Shopping Cart</h1>
+          <h3 class="black-letter">{{ cart.length }} items</h3>
+        </div>
+
+        <div *ngFor="let product of cart" class="left-body-container">
+
+          <!--          Img container-->
+          <div class="body-image-container">
+            <img [src]="product.imgUrl" alt="Product aImage" width="170px" height="200px">
+          </div>
+
+          <!--          Product description-->
+          <div class="body-product-container">
+            {{ product.name }}
+          </div>
+
+          <!-- Control de cantidad -->
+          <div class="body-amount-container">
+            <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+              <i class="fas fa-minus"></i>
+            </button>
+
+            <input id="form1" min="0" name="quantity" value="1" type="number"
+                   class="form-control form-control-sm"/>
+
+            <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="body-price-container">
+            {{ product.unitPrice | currency:'MXN' }}
+          </div>
+
+
+          <!-- Eliminar producto -->
+          <div class="body-delete-container">
+            <a href="#!" class="text-muted" (click)="removeProduct(product.productId)"><i class="fas fa-times"></i></a>
+          </div>
+
+        </div>
+
+
+        <hr class="my-4">
+
+        <div class="back-to-shop-style">
+          <i class="fas fa-long-arrow-alt-left me-2"></i>
+          <a class="btn btn-outline-dark" [routerLink]="['/home']" routerLinkActive="active">Back to</a>
+        </div>
+
+      </div>
+
+      <!-- Lado derecho -->
+      <div class="right-part">
+
+        <div class="header-right">
+          Order Details
+        </div>
+
+        <div class="right-body-container">
+
+          <!-- Direcciones de envio -->
+
+          <div class="shipping-direction">
+
+            <h3 class="black-letter">Shipping Address</h3>
+            <p>Calle: {{ address?.street }}</p>
+            <p>Ciudad: {{ address?.city }}</p>
+            <p>Estado: {{ address?.state }}</p>
+            <p>Codigo Postal: {{ address?.postalCode }}</p>
+            <p>Pais: {{ address?.country }}</p>
+
+          </div>
+
+
+          <hr class="my-4">
+
+          <button type="submit" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark"
+                  (click)="submitOrder()">
+            Comprar ahora
+          </button>
+
+        </div>
+
+        <div class="total-paid-style">
+          <h5 class="total-paid-style">Monto total a pagar: {{ totalPrice | currency:'MXN' }} </h5>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,204 @@
+.main-container {
+  background-color: #003366; /* Color azul petróleo para el fondo */
+  color: white; /* Color de letra blanco para el texto dentro del contenedor principal */
+  display: flex;
+  justify-content: center; /* Centra el content-container horizontalmente */
+  flex-wrap: wrap;
+}
+
+.content-container {
+  color: black; /* Color de letra negro para mejorar la visibilidad */
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 80%; /* Ocupa el 80% del espacio disponible, dejando un 10% a cada lado */
+  max-width: 80%; /* Establece un ancho máximo para mantener el espacio a los lados */
+  border-radius: 30px !important; /* Bordes redondeados */
+  margin: 20px; /* Margen para asegurar espacio alrededor del contenedor */
+  background-color: white; /* Fondo blanco para todo el contenedor de contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para un efecto elevado */
+  clip-path: border-box;
+}
+
+.left-part {
+  background-color: #d3d3d3; /* Color gris para el fondo del lado izquierdo */
+  color: black; /* Color de letra negro para el texto dentro del lado izquierdo */
+  flex: 0 0 66.66667%; /* 8 de 12 columnas, ajusta según necesites */
+  max-width: 66.66667%;
+}
+
+.right-part {
+  background-color: white; /* Fondo blanco para el lado derecho */
+  color: black; /* Color de letra negro para el texto dentro del lado derecho */
+  flex: 0 0 33.33333% !important; /* 4 de 12 columnas, ajusta según necesites */
+  max-width: 33.33333% !important;
+}
+
+.header-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; /* Centra los elementos verticalmente */
+  font-size: 30px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; /* Centra los elementos verticalmente */
+  font-size: 30px;
+  padding: 20px;
+}
+
+.left-body-container {
+  display: flex; /* Habilita flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 20px; /* Espacio entre cada elemento */
+  margin: 20px 0; /* Margen superior e inferior para separar del resto */
+  padding: 10px; /* Padding interno */
+  background-color: #f8f9fa; /* Un fondo claro, cambia según tu diseño */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar el contenedor */
+}
+
+.right-body-container {
+  padding: 20px;
+  font-size: 22px;
+}
+
+.body-image-container {
+  clip-path: border-box;
+  border-radius: 30px !important;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+.body-product-container, .body-amount-container, .body-price-container, .body-delete-container {
+  display: flex; /* Utiliza flexbox para alinear ítems internos */
+  flex-direction: column; /* Organiza los ítems en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  flex: 1; /* Distribuye el espacio disponible equitativamente */
+  font-size: 23px !important;
+}
+
+/* Ajustes para botones y campo de entrada en el control de cantidad */
+.body-amount-container {
+  display: flex; /* Mantiene los elementos en línea */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 5px; /* Añade espacio entre los elementos */
+  font-size: 15px;
+  flex-direction: row; /* Organiza los ítems en fila */
+}
+
+.body-amount-container button {
+  width: 30px; /* Ancho fijo para los botones */
+  height: 30px; /* Alto fijo para los botones */
+  border-radius: 50%; /* Hace el botón completamente redondo */
+  display: flex; /* Asegura que el botón se comporte como un contenedor flex */
+  justify-content: center; /* Centra el ícono horizontalmente */
+  align-items: center; /* Centra el ícono verticalmente */
+  padding: 0; /* Elimina el padding predeterminado */
+  border: 1px solid #ccc; /* Borde sutil, ajusta a tu gusto */
+}
+
+.body-amount-container input {
+  text-align: center; /* Centra el texto dentro del input */
+  width: 50px; /* Ancho específico para el input */
+  margin: 0 5px; /* Añade margen a los lados del input */
+}
+
+/* Estilo para el icono de eliminar producto */
+.body-delete-container a {
+  color: #fffefe; /* Color más visible, ajusta según necesites */
+  font-size: 24px; /* Ajusta el tamaño del icono */
+  display: flex; /* Asegura que el enlace se comporta como un contenedor flex */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 30px; /* Ancho específico */
+  height: 30px; /* Alto específico */
+  border-radius: 50%; /* Hace el botón completamente redondo */
+  background-color: #020101; /* Fondo claro para el botón, cambia según tu diseño */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el botón */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.registration-form {
+  background-color: #f8f9fa; /* Un fondo claro, cambia según tu diseño */
+  padding: 20px; /* Espacio interno para separar el contenido de los bordes */
+  border-radius: 10px; /* Bordes redondeados para el contenedor del formulario */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar el contenedor */
+  text-align-last: center;
+}
+
+.registration-form h5 {
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.registration-form form {
+  display: flex; /* Organiza los elementos del formulario en una columna */
+  flex-direction: column; /* Organiza los elementos del formulario en una columna */
+}
+
+.registration-form input, .registration-form button {
+  margin-bottom: 10px; /* Espacio debajo de cada campo de entrada y botón */
+  border-radius: 20px; /* Bordes redondeados para los campos de entrada y el botón */
+}
+
+.registration-form button {
+  border: none; /* Elimina el borde del botón */
+  color: #fff; /* Color de texto blanco para el botón */
+  background-color: #343a40; /* Color de fondo oscuro para el botón */
+}
+
+.btn-dark.btn-block.btn-lg {
+  border: none; /* Elimina el borde del botón */
+  color: #fff; /* Color de texto blanco para el botón */
+  background-color: #343a40; /* Color de fondo oscuro para el botón */
+  border-radius: 20px; /* Bordes redondeados para el botón */
+  margin-bottom: 10px; /* Espacio debajo del botón */
+  width: 95%; /* Ocupa todo el ancho disponible */
+  padding: 20px;
+}
+
+.total-paid-style {
+  background-color: #d2a679;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding-top: 10px;
+  margin-right: 40px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+
+}
+
+.back-to-shop-style[_ngcontent-ng-c1163340213] {
+  margin-top: 40%;
+  left: 10px !important;
+  bottom: 0px !important;
+  margin-left: 10px;
+}
+
+.black-letter {
+  /* font: 400 16px / 28px Roboto, sans-serif; */
+  letter-spacing: .009375em;
+  margin: 0 0 16px;
+  font-size: larger;
+  padding-top: 30px ! important;
+  font-weight: 600;
+}
+
+/* Ajustes para la responsividad */
+@media (max-width: 992px) {
+  .content-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .left-part,
+  .right-part {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+

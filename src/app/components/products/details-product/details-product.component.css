@@ -10834,7 +10834,7 @@ textarea.form-control-lg {
 }
 
 .card-img[_ngcontent-ng-c3235422037], .card-img-top[_ngcontent-ng-c3235422037], .card-img-bottom[_ngcontent-ng-c3235422037] {
-  width: 50%;
+   width: 50%;
 }
 
 .image-data-container {
@@ -10859,14 +10859,4 @@ textarea.form-control-lg {
 
 .d-flex {
   justify-content: center;
-}
-
-.reverse-flex {
-  flex-direction: row-reverse !important;
-}
-
-.no-wrap-flex[_ngcontent-ng-c1678838045] {
-  display: flex;
-  flex-wrap: nowrap !important;
-  flex-direction: row-reverse;
 }

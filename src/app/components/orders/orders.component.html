@@ -1,0 +1,67 @@
+<section>
+
+  <div class="header">
+    Order Details
+  </div>
+
+  <div class="main-container">
+
+    <div *ngFor="let order of orders">
+      <div class="content-container">
+
+
+        <!-- Lado izquierdo -->
+        <div class="left-part">
+
+          <div>
+            <!-- Order ID -->
+            <div class="">
+              <h2>Order ID: {{ order.id }}</h2>
+            </div>
+
+            <hr>
+
+            <!-- Status -->
+            <div class="">
+              <p>Status: {{ order.status }}</p>
+            </div>
+
+            <hr>
+
+
+            <!-- Shipping Address -->
+            <div class="">
+              <p>Calle: {{ order.shippingAddress.street }}</p>
+              <p>Ciudad: {{ order.shippingAddress.city }}</p>
+              <p>Estado: {{ order.shippingAddress.state }}</p>
+              <p>Codigo Postal: {{ order.shippingAddress.postalCode }}</p>
+              <p>Pais: {{ order.shippingAddress.country }}</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Lado derecho -->
+        <div class="right-part">
+
+
+          <div *ngFor="let product of order.shoppingCart.products">
+
+            <h4>{{ product.name }}</h4>
+            <p> Precio: {{ product.unitPrice }}</p>
+            <img [src]="product.imgUrl" alt="Product Image" height="130px" width="100px">
+
+            <hr>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
